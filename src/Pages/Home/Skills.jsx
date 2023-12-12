@@ -6,7 +6,7 @@ import { SiExpress, SiTailwindcss } from "react-icons/si";
 import 'react-circular-progressbar/dist/styles.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import Typed from 'react-typed';
+
 import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
@@ -35,15 +35,15 @@ const SkillsSection = () => {
     <div className="container mx-auto my-20">
       <div className="container mx-auto text-center">
 
-        <div className='grid justify-center items-center my-6'>
-          <Typed
-            strings={['SKILLSET', 'My Skills', 'Expertise']}
-            typeSpeed={80}
-            backSpeed={40}
-            loop
-            className="text-4xl font-extrabold  text-[#6f42c1] font-mono"  
-          />
-          <div className="divider divider-info text-[#6f42c1] ">skills</div>
+      <div className='grid justify-center items-center my-6'>
+          
+          
+            
+            
+             
+          
+          <div className="text-4xl font-bold  text-[#6f42c1] font-mono" >SkIllSET</div>
+          <div className="divider divider-info text-[#6f42c1] ">-/-</div>
         
         </div>
 

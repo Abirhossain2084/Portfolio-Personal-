@@ -50,8 +50,8 @@ const NavBar = () => {
         <div className="navbar-end gap-2">
           <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+              <div className="h-10 border rounded-full">
+                <img alt="Tailwind CSS Navbar component" src="https://i.ibb.co/C92q4TZ/80676294-1034651610212241-1003760245354266624-n-removebg-preview.png" />
               </div>
             </div>
             <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">

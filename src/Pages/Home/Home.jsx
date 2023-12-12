@@ -1,7 +1,13 @@
 import AboutMeSection from "./AboutMeSection ";
+import ContactMe from "./ContactMe";
+
 import HeroSlider from "./HeroSlider";
-import RecentProjectsShow from "./RecentProjectsShow";
+import ProjectPage from "./ProjectPage";
+
+
+
 import Skills from "./Skills";
+import Timeline from "./Timeline";
 import TopService from "./TopService";
 
 
@@ -9,11 +15,14 @@ const Home = () => {
     return (
         <div>
             <HeroSlider></HeroSlider>
-            <TopService></TopService>
+            
             <AboutMeSection></AboutMeSection>
             <Skills></Skills>
-            <RecentProjectsShow></RecentProjectsShow>
-            
+            <TopService></TopService>
+            <Timeline></Timeline>
+            <ProjectPage></ProjectPage>
+            <ContactMe></ContactMe>
+         
         </div>
     );
 };

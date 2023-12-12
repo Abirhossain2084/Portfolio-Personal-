@@ -8,7 +8,7 @@ const HeroSection = () => {
         <div className=" hero-content flex-col lg:flex-row-reverse w-full justify-center items-center mt-20">
           
           <div className='flex justify-end w-1/2'>
-          <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" className="max-w-sm rounded-lg shadow-2xl" alt="Hero" />
+          <img src="https://i.ibb.co/C92q4TZ/80676294-1034651610212241-1003760245354266624-n-removebg-preview.png" className="max-w-sm rounded-full shadow-2xl" alt="Hero" />
             </div>
          
           <div className='text-center lg:text-left '> 
