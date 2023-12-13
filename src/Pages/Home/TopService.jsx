@@ -8,7 +8,7 @@ AOS.init();
 const TopService = () => {
   return (
     <div className="container mx-auto mt-10">
-      <div className="flex justify-center items-center gap-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-6">
         <div className="card h-40 bg-base-100 border border-solid border-gray-300 hover:border-[#6f42c1] shadow-xl relative overflow-hidden" data-aos="fade-up">
           <figure>
             <img src="https://i.ibb.co/4S1rHbt/lautaro-andreani-xk-Baqlcqeb4-unsplash.jpg" alt="MERN" className="rounded-t-md object-cover w-full h-full" />

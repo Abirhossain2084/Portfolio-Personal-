@@ -1,22 +1,19 @@
 
 import { Link } from "react-router-dom";
 
-import { FaCartShopping } from "react-icons/fa6";
+
 
 const NavBar = () => {
 
 
-
-
+ 
   const NavItems = <>
 
     <Link to='/'><li><a>Home</a></li></Link>
     <Link to='/projects'><li><a>Projects</a></li></Link>
     <Link to='/about'><li><a>About me</a></li></Link>
-    <Link to='/contact'><li><a>Contact</a></li></Link>
+    <Link to='/contactsection' smooth={true} duration={500} className="contactsection"><li><a>Contact</a></li></Link>
     <Link to='/resume'><li><a>Resume</a></li></Link>
-
-
 
 
 
@@ -37,10 +34,14 @@ const NavBar = () => {
               }
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">ABIR HOSSAIN</a>
+       
+          <img 
+          className="w-52 h-full"
+          src="https://i.ibb.co/PYhF4bN/Pink-Typography-Initial-AP-Logo-1-removebg-preview.png" alt="" />
+       
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 ">
+          <ul className="menu menu-horizontal px-1  font-bold ">
             {
               NavItems
             }
@@ -58,11 +59,10 @@ const NavBar = () => {
               <li>
                 <a className="justify-between">
                   Profile
-                  <span className="badge">New</span>
+                  <span className="badge"></span>
                 </a>
               </li>
-              <li><a>Settings</a></li>
-              <li><a>Logout</a></li>
+              
             </ul>
           </div>
 

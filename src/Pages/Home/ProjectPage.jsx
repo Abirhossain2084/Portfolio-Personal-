@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { Link } from 'react-scroll';
 
 const ProjectPage = () => {
   const projects = [
@@ -11,36 +12,42 @@ const ProjectPage = () => {
       name: 'OutingBD',
       description: 'Travel and Tourisom Website',
       image: 'https://i.ibb.co/qkhpzbS/Outing-BD-1.png',
+      livelink: 'https://outingbd-e0644.web.app/'
     },
     {
       id: 2,
       name: 'People Pulse',
       description: 'Employee Managmment Systems',
       image: 'https://i.ibb.co/16pWk5J/Home.png',
+      livelink:'https://people-pulse-63cf6.web.app/',
     },
     {
       id: 3,
       name: 'M|I poullas',
       description: 'Darwin Painting & Decorative Contractors',
       image: 'https://i.ibb.co/khZMf8Y/Darwin-Painting-Services-Painters-Darwin-M-I-Poullas.png',
+      livelink:'https://mipoullas.com.au/',
     },
     {
       id: 4,
       name: 'AutoPathfinders',
       description: 'Car Blog Website',
       image: 'https://i.ibb.co/0X81Hdv/Auto-Pathfinders.png',
+      livelink:'https://autopathfinders.web.app/',
     },
     {
       id: 5,
       name: 'SkyXDigital',
       description: 'Marketing Agency Website',
       image: 'https://i.ibb.co/khDRzcL/Digital-Marketing-Agency-Sky-X-Digital.png',
+      livelink:'https://skyxdigital.com/',
     },
     {
       id: 6,
       name: 'The Container House',
       description: 'House Building Company',
       image: 'https://i.ibb.co/1d6j0Bm/Explore-The-Container-House-Solutions-Dream-Container-Home.png',
+      livelink:'https://thecontainerhouse.com.au/'
     },
   ];
 
@@ -78,7 +85,7 @@ const ProjectPage = () => {
 
   return (
     <div className="container mx-auto my-20 ">
-     
+
       <div className='grid justify-center items-center my-20' data-aos='fade-up'>
         <div className="text-4xl font-bold  text-[#6f42c1] font-mono" >Recent Projects</div>
         <div className="divider divider-info text-[#6f42c1] ">-/-</div>
@@ -90,6 +97,11 @@ const ProjectPage = () => {
             <img src={project.image} alt={project.name} className="mx-auto mb-4 max-h-96 object-cover" /> {/* Added max height and object-cover */}
             <h3 className="text-2xl font-semibold text-[#830343]">{project.name}</h3>
             <p className="text-gray-700">{project.description}</p>
+
+            <a href={project.livelink} target="_blank" rel="noopener noreferrer">
+              <button className="btn bg-gradient-to-r from-[#6f42c1] to-[#830343] text-white">Live Link</button>
+            </a>
+
           </div>
         ))}
       </Slider>

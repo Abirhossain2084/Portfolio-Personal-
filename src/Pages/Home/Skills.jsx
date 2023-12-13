@@ -11,16 +11,15 @@ import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
   const skills = [
-    { title: 'HTML5', icon: <FaHtml5 className='text-orange-500' />, percentage: 90 },
-    { title: 'CSS3', icon: <FaCss3 className='text-blue-600' />, percentage: 85 },
-    { title: 'Tailwind CSS', icon: <SiTailwindcss className='text-blue-500' />, percentage: 85 },
-    { title: 'JavaScript', icon: <FaJs className='bg-yellow-400' />, percentage: 75 },
-    { title: 'React', icon: <FaReact className='text-blue-300' />, percentage: 80 },
-    { title: 'Node.js', icon: <FaNodeJs className='text-green-600' />, percentage: 75 },
-    { title: 'MongoDB', icon: <DiMongodb className='text-green-700' />, percentage: 70 },
-    { title: 'Express', icon: <SiExpress className='text-black' />, percentage: 70 },
-    { title: 'Wordpress', icon: <FaWordpress className='text-blue-400' />, percentage: 70 },
- 
+    { title: 'HTML5', icon: <FaHtml5 className='text-orange-500' />, level: 'Intermediate' },
+    { title: 'CSS3', icon: <FaCss3 className='text-blue-600' />, level: 'Intermediate' },
+    { title: 'Tailwind CSS', icon: <SiTailwindcss className='text-blue-500' />, level: 'Intermediate' },
+    { title: 'JavaScript', icon: <FaJs className='bg-yellow-400' />, level: 'Intermediate' },
+    { title: 'React', icon: <FaReact className='text-blue-300' />, level: 'Intermediate' },
+    { title: 'Node.js', icon: <FaNodeJs className='text-green-600' />, level: 'Intermediate' },
+    { title: 'MongoDB', icon: <DiMongodb className='text-green-700' />, level: 'Intermediate' },
+    { title: 'Express', icon: <SiExpress className='text-black' />, level: 'Intermediate' },
+    { title: 'Wordpress', icon: <FaWordpress className='text-blue-400' />, level: 'Intermediate' },
   ];
 
   useEffect(() => {
@@ -35,19 +34,19 @@ const SkillsSection = () => {
     <div className="container mx-auto my-20">
       <div className="container mx-auto text-center">
 
-      <div className='grid justify-center items-center my-6'>
-          
-          
-            
-            
-             
-          
+        <div className='grid justify-center items-center my-6'>
+
+
+
+
+
+
           <div className="text-4xl font-bold  text-[#6f42c1] font-mono" >SkIllSET</div>
           <div className="divider divider-info text-[#6f42c1] ">-/-</div>
-        
+
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-20">
           {skills.map((skill, index) => (
             <motion.div
               key={index}
@@ -57,23 +56,20 @@ const SkillsSection = () => {
             >
               <h3 className="text-2xl font-semibold">{skill.title}</h3>
               <div className='' style={{ width: '50px', height: '80px', margin: 'auto', }}>
-
-                <CircularProgressbarWithChildren
-                  value={skill.percentage}
-                  strokeWidth={8}
-                  styles={{
-                    path: { stroke: 'white' },
-                    trail: { stroke: 'green' },
-                  }}
-                >
-                  <div className="text-lg font-semibold">
-                    {`${skill.percentage}%`}
-                  </div>
-                </CircularProgressbarWithChildren>
-              </div>
+             <div className=''>
               <p className="text-5xl">{skill.icon}</p>
+                <div className="text-lg font-semibold">
+                  {skill.level}
+                </div>
+             </div>
+              
+              </div>
+             
             </motion.div>
           ))}
+
+
+
         </div>
       </div>
     </div>

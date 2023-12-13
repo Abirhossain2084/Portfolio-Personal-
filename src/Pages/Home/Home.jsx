@@ -12,6 +12,8 @@ import TopService from "./TopService";
 
 
 const Home = () => {
+
+   
     return (
         <div>
             <HeroSlider></HeroSlider>
@@ -22,6 +24,7 @@ const Home = () => {
             <Timeline></Timeline>
             <ProjectPage></ProjectPage>
             <ContactMe></ContactMe>
+           
          
         </div>
     );
