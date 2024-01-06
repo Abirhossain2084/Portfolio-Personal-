@@ -1,8 +1,11 @@
 import AboutMeSection from "./AboutMeSection ";
 import ContactMe from "./ContactMe";
+import ExperienceSection from "./ExperienceSection ";
+
 
 import HeroSlider from "./HeroSlider";
 import ProjectPage from "./ProjectPage";
+import Services from "./Services";
 
 
 
@@ -17,12 +20,15 @@ const Home = () => {
     return (
         <div>
             <HeroSlider></HeroSlider>
-            
+         
             <AboutMeSection></AboutMeSection>
             <Skills></Skills>
             <TopService></TopService>
+            <Services></Services>
             <Timeline></Timeline>
+
             <ProjectPage></ProjectPage>
+            <ExperienceSection></ExperienceSection>
             <ContactMe></ContactMe>
            
          

@@ -1,41 +1,42 @@
-import React, { useState } from 'react';
-
+import  { useRef, useState } from 'react';
+import emailjs from '@emailjs/browser';
+import Swal from 'sweetalert2';
 const ContactMe = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+ 
+  const form = useRef();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Implement your logic to handle form submission (e.g., send an email, save to database)
-    console.log('Form submitted:', formData);
-  };
 
+    emailjs.sendForm('service_gjbcpsr', 'template_ednxyca', form.current, 'qPZX1bjYVv3Cfre6u')
+      .then((result) => {
+          console.log(result.text);
+
+          Swal.fire({
+            icon: 'success',
+            title: 'Email Sent!',
+            text: 'Your email has been sent successfully!',
+          });
+          form.current.reset();
+      }, (error) => {
+          console.log(error.text);
+          Swal.fire({
+            icon: 'Error',
+            title: 'Something went Wrong!',
+            text: 'Your email has been not Sent!',
+          });
+      });
+  };
   return (
     <section id='contactsection'>
-
-      <div
-
-        className="container mx-auto my-20 bg-gray-900 p-8 rounded-md shadow-md grid lg:grid-cols-2 gap-8 px-8 items-center justify-center">
+      <div className="container mx-auto my-20 bg-gray-900 p-8 rounded-md shadow-md grid lg:grid-cols-2 gap-8 px-8 items-center justify-center">
         {/* Form */}
         <div className=" pr-8">
           <div className='grid justify-center items-center my-6'>
-
-            <div className="text-4xl font-bold  text-[#6f42c1] font-mono" >Contact me</div>
-            <div className="divider divider-info text-[#6f42c1] ">-/-</div>
-
+            <div className="text-4xl font-bold text-[#6f42c1] font-mono">Contact me</div>
+            <div className="divider divider-info text-[#6f42c1]">-/-</div>
           </div>
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={sendEmail}>
             <div className="mb-4">
               <label htmlFor="name" className="block text-gray-700 font-bold mb-2">
                 Name
@@ -44,8 +45,7 @@ const ContactMe = () => {
                 type="text"
                 id="name"
                 name="name"
-                value={formData.name}
-                onChange={handleChange}
+            
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-[#6f42c1]"
                 required
               />
@@ -58,8 +58,7 @@ const ContactMe = () => {
                 type="email"
                 id="email"
                 name="email"
-                value={formData.email}
-                onChange={handleChange}
+               
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-[#6f42c1]"
                 required
               />
@@ -71,8 +70,7 @@ const ContactMe = () => {
               <textarea
                 id="message"
                 name="message"
-                value={formData.message}
-                onChange={handleChange}
+               
                 rows="4"
                 className="w-full px-4 py-2 border rounded-md focus:outline-none focus:border-[#6f42c1]"
                 required
@@ -94,10 +92,17 @@ const ContactMe = () => {
             alt="Contact Me"
             className="rounded-md"
           />
+          {/* Additional Info */}
+          <div className="mt-4 text-white">
+            <p className="text-lg">Contact Information: </p>
+            <p className="text-sm">Email: abirhossain2084@gmail.com</p>
+            <p className="text-sm">Phone: +8801840045296</p>
+            <p className="text-lg mt-4">Location:</p>
+            <p className="text-sm">Dhaka, Bangladesh</p>
+          </div>
         </div>
       </div>
     </section>
-
   );
 };
 

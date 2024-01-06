@@ -11,15 +11,15 @@ import { motion } from 'framer-motion';
 
 const SkillsSection = () => {
   const skills = [
-    { title: 'HTML5', icon: <FaHtml5 className='text-orange-500' />, level: 'Intermediate' },
-    { title: 'CSS3', icon: <FaCss3 className='text-blue-600' />, level: 'Intermediate' },
-    { title: 'Tailwind CSS', icon: <SiTailwindcss className='text-blue-500' />, level: 'Intermediate' },
+    { title: 'HTML5', icon: <FaHtml5 className='text-orange-500' />, level: 'Expert' },
+    { title: 'CSS3', icon: <FaCss3 className='text-blue-600' />, level: 'Expert' },
+    { title: 'Tailwind CSS', icon: <SiTailwindcss className='text-blue-500' />, level: 'Expert' },
     { title: 'JavaScript', icon: <FaJs className='bg-yellow-400' />, level: 'Intermediate' },
-    { title: 'React', icon: <FaReact className='text-blue-300' />, level: 'Intermediate' },
+    { title: 'React', icon: <FaReact className='text-blue-300' />, level: 'Advanced' },
     { title: 'Node.js', icon: <FaNodeJs className='text-green-600' />, level: 'Intermediate' },
     { title: 'MongoDB', icon: <DiMongodb className='text-green-700' />, level: 'Intermediate' },
     { title: 'Express', icon: <SiExpress className='text-black' />, level: 'Intermediate' },
-    { title: 'Wordpress', icon: <FaWordpress className='text-blue-400' />, level: 'Intermediate' },
+    { title: 'Wordpress', icon: <FaWordpress className='text-blue-400' />, level: 'Advanced' },
   ];
 
   useEffect(() => {
