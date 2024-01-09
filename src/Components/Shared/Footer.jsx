@@ -2,7 +2,7 @@
 const Footer = () => {
     return (
         <div className="">
-          <footer className="footer footer-center p-10 bg-gradient-to-r from-[#6f42c1] via-[#830343] to-[#6f42c1] text-white ">
+          <footer className="footer footer-center p-10 bg-gradient-to-r from-[#2c096b] via-[#33041b] to-[#320e75] text-white ">
   <aside>
    <img src="https://i.ibb.co/PYhF4bN/Pink-Typography-Initial-AP-Logo-1-removebg-preview.png" alt="" /><p className="font-bold">
       MD.ABIR HOSSAIN <br/>Web Developer

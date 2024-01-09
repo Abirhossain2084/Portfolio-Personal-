@@ -52,7 +52,7 @@ const SkillsSection = () => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={`${index * 100}`}
-              className="flex items-center text-center bg-gradient-to-r from-[#6f42c1] via-[#830343] to-[#6f42c1] text-white rounded-lg p-4 drop-shadow-2xl"
+              className="flex items-center text-center bg-gradient-to-r from-[#2a0372] via-[#240313] to-[#320e75] text-white rounded-lg p-4 drop-shadow-2xl"
             >
               <h3 className="text-2xl font-semibold">{skill.title}</h3>
               <div className='' style={{ width: '50px', height: '80px', margin: 'auto', }}>

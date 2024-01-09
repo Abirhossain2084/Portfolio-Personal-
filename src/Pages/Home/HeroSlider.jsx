@@ -5,7 +5,7 @@ import 'aos/dist/aos.css';
 import { FaGithub, FaLinkedin, FaTwitter, FaDownload } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { TypeAnimation } from 'react-type-animation';
-
+import resume from "../../../public/Abir hossain's Resume .pdf"
 const HeroSection = () => {
 
   useEffect(() => {
@@ -16,23 +16,7 @@ const HeroSection = () => {
     });
   }, []);
 
-  const handleDownloadResume = async () => {
-    // Use the direct download link by changing the "/view" to "/export?format=pdf"
-    const url = 'https://drive.google.com/uc?export=download&id=1Vxh2IsLiEJKq8iSiMXWDbjiM7t5pYLn_';
 
-    try {
-      const response = await fetch(url);
-      const blob = await response.blob();
-
-      // Create a link and trigger the download
-      const link = document.createElement('a');
-      link.href = window.URL.createObjectURL(blob);
-      link.download = 'Abir_Hossain_Resume.pdf'; // Replace with your desired file name
-      link.click();
-    } catch (error) {
-      console.error('Error downloading resume:', error);
-    }
-  };
 
 
 
@@ -75,11 +59,13 @@ const HeroSection = () => {
                     sequence={[
                       'ABIR',
                       2000, // wait 1s before replacing "Mice" with "Hamsters"
-                      'Website Designer',
+                      'Web Designer',
                       1000,
                       'Web Developer',
                       1000,
                       'Wordpress Designer',
+                      1000,
+                      'Wordpress Developer',
                       1000
                     ]}
                     wrapper="span"
@@ -112,13 +98,13 @@ const HeroSection = () => {
 
                 {/* Social Icons */}
                 <div className="flex items-center justify-center space-x-4">
-                  <a href="your_github_profile" target="_blank" rel="noopener noreferrer">
+                  <a href="https://github.com/Abirhossain2084" target="_blank" rel="noopener noreferrer">
                     <FaGithub size={40} color="#6f42c1" />
                   </a>
-                  <a href="your_linkedin_profile" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/in/md-abir-hossain-212051275/" target="_blank" rel="noopener noreferrer">
                     <FaLinkedin size={40} color="#6f42c1" />
                   </a>
-                  <a href="your_twitter_profile" target="_blank" rel="noopener noreferrer">
+                  <a href="#" target="_blank" rel="noopener noreferrer">
                     <FaTwitter size={40} color="#6f42c1" />
                   </a>
                 </div>
@@ -128,12 +114,16 @@ const HeroSection = () => {
 
 
                 <motion.button
-                  onClick={handleDownloadResume}
+                
                   className="mt-8 bg-[#6f42c1] text-white py-2 px-4 rounded-full focus:outline-none hover:bg-[#4d2882]"
                   animate={controls}
                 >
-                  <FaDownload className="mr-2" />
-                  Download Resume
+                  <div className='flex justify-center items-center'>
+                    <FaDownload className="mr-2" />
+                 
+                  <a href={resume}>Download Resume</a>
+                  </div>
+                  
                 </motion.button>
 
 

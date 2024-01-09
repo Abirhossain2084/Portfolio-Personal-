@@ -10,10 +10,10 @@ const NavBar = () => {
   const NavItems = <>
 
     <Link to='/'><li><a>Home</a></li></Link>
-    <Link to='/projects'><li><a>Projects</a></li></Link>
-    <Link to='/about'><li><a>About me</a></li></Link>
-    <Link to='/contactsection' smooth={true} duration={500} className="contactsection"><li><a>Contact</a></li></Link>
-    <Link to='/resume'><li><a>Resume</a></li></Link>
+    <Link to='/'><li><a>Projects</a></li></Link>
+    <Link to='/'><li><a>About me</a></li></Link>
+    <Link to='/' smooth={true} duration={500} className="contactsection"><li><a>Contact</a></li></Link>
+    <Link to='/'><li><a>Resume</a></li></Link>
 
 
 
